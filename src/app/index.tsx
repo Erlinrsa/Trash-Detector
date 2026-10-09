@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Alert,
   Image,
-  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -14,8 +13,11 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { BottomTabInset } from '@/constants/theme';
+import { useAuth } from '@/context/auth-context';
+import { HistoryStorage } from '@/services/history-storage';
 
 export default function HomeScreen() {
+  const { user, logout } = useAuth();
   const colorScheme = useColorScheme();
   const isDark = colorScheme === 'dark';
   const { width } = useWindowDimensions();
@@ -23,6 +25,7 @@ export default function HomeScreen() {
 
   // State untuk demonstrasi preview hasil deteksi vs placeholder kosong
   const [hasSampleResult, setHasSampleResult] = useState<boolean>(false);
+  const [isSavedToHistory, setIsSavedToHistory] = useState<boolean>(false);
 
   // Palet warna ramah lingkungan dengan rasio kontras tinggi (WCAG AA/AAA)
   const colors = {
@@ -43,6 +46,23 @@ export default function HomeScreen() {
     cardShadow: isDark ? 'rgba(0, 0, 0, 0.4)' : 'rgba(21, 128, 61, 0.08)',
   };
 
+  const handleLogout = () => {
+    Alert.alert(
+      'Konfirmasi Keluar (Logout)',
+      'Apakah kamu yakin ingin keluar dari aplikasi? Sesi token aman akan dihapus dari Secure Storage.',
+      [
+        { text: 'Batal', style: 'cancel' },
+        {
+          text: 'Keluar',
+          style: 'destructive',
+          onPress: async () => {
+            await logout();
+          },
+        },
+      ]
+    );
+  };
+
   const handleCameraPress = () => {
     Alert.alert(
       'Kamera Trash Detector',
@@ -50,7 +70,10 @@ export default function HomeScreen() {
       [
         {
           text: 'Tampilkan Contoh Hasil',
-          onPress: () => setHasSampleResult(true),
+          onPress: () => {
+            setHasSampleResult(true);
+            setIsSavedToHistory(false);
+          },
         },
         { text: 'Tutup', style: 'cancel' },
       ]
@@ -64,10 +87,28 @@ export default function HomeScreen() {
       [
         {
           text: 'Tampilkan Contoh Hasil',
-          onPress: () => setHasSampleResult(true),
+          onPress: () => {
+            setHasSampleResult(true);
+            setIsSavedToHistory(false);
+          },
         },
         { text: 'Tutup', style: 'cancel' },
       ]
+    );
+  };
+
+  const handleSaveToHistory = async () => {
+    await HistoryStorage.addHistoryItem({
+      title: 'Botol Plastik Minuman (PET)',
+      category: 'Anorganik',
+      confidence: 96,
+      instruction: 'Bilas bersih, remas hingga pipih, lalu buang ke tempat sampah anorganik (kuning).',
+      icon: '🧴',
+    });
+    setIsSavedToHistory(true);
+    Alert.alert(
+      'Berhasil Tersimpan! 🎉',
+      'Hasil deteksi telah dicatat ke halaman Riwayat (Tab 2). Kamu bisa melihat seluruh arsip pemilahan di sana.'
     );
   };
 
@@ -85,6 +126,38 @@ export default function HomeScreen() {
       ]}
       showsVerticalScrollIndicator={false}>
       <View style={styles.responsiveWrapper}>
+        {/* ========================================================= */}
+        {/* BAR PENGGUNA TERAUTENTIKASI (PROFIL & LOGOUT)            */}
+        {/* ========================================================= */}
+        <View
+          style={[
+            styles.userStatusBar,
+            {
+              backgroundColor: colors.surface,
+              borderColor: colors.surfaceBorder,
+              shadowColor: colors.cardShadow,
+            },
+          ]}>
+          <View style={styles.userAvatarBubble}>
+            <Text style={styles.userAvatarIcon}>👤</Text>
+          </View>
+          <View style={styles.userInfoCol}>
+            <Text style={[styles.userGreeting, { color: colors.textSecondary }]}>
+              Masuk sebagai:
+            </Text>
+            <Text style={[styles.userName, { color: colors.textPrimary }]}>
+              {user?.name || 'Pengguna Trash Detector'}
+            </Text>
+          </View>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="Keluar dari akun aplikasi (Logout)"
+            onPress={handleLogout}
+            style={[styles.logoutBtn, { backgroundColor: isDark ? '#3b1212' : '#fee2e2' }]}>
+            <Text style={styles.logoutBtnText}>Keluar 🚪</Text>
+          </Pressable>
+        </View>
+
         {/* ========================================================= */}
         {/* 1. HEADER: BRANDING, JUDUL, & TAGLINE                     */}
         {/* ========================================================= */}
@@ -211,7 +284,10 @@ export default function HomeScreen() {
               <Pressable
                 accessibilityRole="button"
                 accessibilityLabel="Reset hasil deteksi kembali ke tampilan awal"
-                onPress={() => setHasSampleResult(false)}
+                onPress={() => {
+                  setHasSampleResult(false);
+                  setIsSavedToHistory(false);
+                }}
                 style={[styles.resetButton, { backgroundColor: colors.surfaceSubtle }]}>
                 <Text style={[styles.resetButtonText, { color: colors.accentText }]}>
                   ↺ Bersihkan
@@ -271,7 +347,10 @@ export default function HomeScreen() {
               <Pressable
                 accessibilityRole="button"
                 accessibilityLabel="Lihat simulasi contoh hasil deteksi"
-                onPress={() => setHasSampleResult(true)}
+                onPress={() => {
+                  setHasSampleResult(true);
+                  setIsSavedToHistory(false);
+                }}
                 style={[styles.demoTriggerButton, { backgroundColor: colors.surfaceSubtle }]}>
                 <Text style={[styles.demoTriggerText, { color: colors.primary }]}>
                   👁️ Lihat Contoh Format Hasil Deteksi
@@ -324,6 +403,28 @@ export default function HomeScreen() {
                   4. Buang ke Tempat Sampah Anorganik (Warna Kuning) atau bank sampah terdekat.
                 </Text>
               </View>
+
+              {/* Tombol Simpan ke Riwayat */}
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel="Simpan hasil deteksi ini ke riwayat"
+                disabled={isSavedToHistory}
+                onPress={handleSaveToHistory}
+                style={[
+                  styles.saveHistoryBtn,
+                  {
+                    backgroundColor: isSavedToHistory ? colors.surfaceSubtle : colors.primary,
+                    borderColor: colors.primary,
+                  },
+                ]}>
+                <Text
+                  style={[
+                    styles.saveHistoryBtnText,
+                    { color: isSavedToHistory ? colors.accentText : '#ffffff' },
+                  ]}>
+                  {isSavedToHistory ? '✓ Sudah Tercatat di Riwayat' : '💾 Simpan Hasil ke Riwayat'}
+                </Text>
+              </Pressable>
             </View>
           )}
         </View>
@@ -443,7 +544,57 @@ const styles = StyleSheet.create({
   responsiveWrapper: {
     width: '100%',
     maxWidth: 680,
-    gap: 24,
+    gap: 20,
+  },
+
+  // User Status Bar
+  userStatusBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 12,
+    borderRadius: 16,
+    borderWidth: 1,
+    gap: 12,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 1,
+    shadowRadius: 6,
+    elevation: 2,
+  },
+  userAvatarBubble: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: '#dcfce7',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  userAvatarIcon: {
+    fontSize: 20,
+  },
+  userInfoCol: {
+    flex: 1,
+    gap: 1,
+  },
+  userGreeting: {
+    fontSize: 11.5,
+    fontWeight: '500',
+  },
+  userName: {
+    fontSize: 14.5,
+    fontWeight: '700',
+  },
+  logoutBtn: {
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    borderRadius: 10,
+    minHeight: 44, // Touch target >= 44px
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  logoutBtnText: {
+    color: '#ef4444',
+    fontSize: 12.5,
+    fontWeight: '700',
   },
 
   // 1. Header Styles
@@ -451,7 +602,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'center',
     gap: 10,
-    paddingTop: 8,
+    paddingTop: 4,
   },
   brandPill: {
     flexDirection: 'row',
@@ -723,6 +874,20 @@ const styles = StyleSheet.create({
   resultGuideStep: {
     fontSize: 13.5,
     lineHeight: 20,
+  },
+  saveHistoryBtn: {
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 46, // Touch target >= 44px
+    marginTop: 4,
+  },
+  saveHistoryBtnText: {
+    fontSize: 14,
+    fontWeight: '700',
   },
 
   // 4. Guide Section Styles
