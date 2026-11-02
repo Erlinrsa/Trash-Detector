@@ -33,7 +33,18 @@
           "imageWidth": 76
         }
       ],
-      "expo-secure-store"
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Trash Detector memerlukan kamera untuk memotret sampah yang ingin diidentifikasi."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Trash Detector memerlukan akses foto untuk memilih gambar sampah dari galeri."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,

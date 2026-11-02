@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f2918" flood-opacity="0.08" />
+    </filter>
+  </defs>
+  <rect width="375" height="812" rx="36" fill="#f6fbf7" />
+  <rect width="375" height="812" rx="36" fill="none" stroke="#264532" stroke-width="2" opacity="0.4"/>
+  <g opacity="0.8">
+    <text x="32" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#0f2918">9:41</text>
+    <circle cx="320" cy="27" r="4" fill="#0f2918" />
+    <circle cx="332" cy="27" r="4" fill="#0f2918" />
+    <rect x="342" y="22" width="18" height="10" rx="3" fill="none" stroke="#0f2918" stroke-width="1.5"/>
+    <rect x="344" y="24" width="12" height="6" rx="1.5" fill="#0f2918"/>
+  </g>
+  <g transform="translate(16, 50)">
+    <rect width="343" height="48" rx="14" fill="#ffffff" stroke="#cde7d5" stroke-width="1" filter="url(#cardShadow)" />
+    <circle cx="30" cy="24" r="15" fill="#dcfce7" />
+    <text x="24" y="29" font-size="14">👤</text>
+    <text x="54" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">Masuk sebagai:</text>
+    <text x="54" y="34" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#0f2918">Mahasiswa Peduli Lingkungan</text>
+    <rect x="265" y="10" width="66" height="28" rx="8" fill="#fee2e2" />
+    <text x="298" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" fill="#ef4444" text-anchor="middle">Keluar 🚪</text>
+  </g>
+  <g transform="translate(16, 110)">
+    <rect width="140" height="24" rx="12" fill="#dcfce7" />
+    <text x="12" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#14532d" letter-spacing="0.5">📋 ARSIP PEMINDAIAN</text>
+    <text x="0" y="50" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="26" fill="#0f2918">Riwayat Sampah</text>
+    <text x="0" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#475569">Catatan pindaian sampah yang telah kamu identifikasi.</text>
+  </g>
+  <g transform="translate(16, 195)">
+    <rect x="0" y="0" width="107" height="68" rx="14" fill="#ffffff" stroke="#cde7d5" stroke-width="1" filter="url(#cardShadow)" />
+    <text x="12" y="22" font-size="14">🔢</text>
+    <text x="12" y="44" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="18" fill="#0f2918">4</text>
+    <text x="12" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">Total Dipindai</text>
+
+    <rect x="118" y="0" width="107" height="68" rx="14" fill="#ffffff" stroke="#cde7d5" stroke-width="1" filter="url(#cardShadow)" />
+    <text x="130" y="22" font-size="14">🌱</text>
+    <text x="130" y="44" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="18" fill="#15803d">+100</text>
+    <text x="130" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">Eco Points</text>
+
+    <rect x="236" y="0" width="107" height="68" rx="14" fill="#ffffff" stroke="#cde7d5" stroke-width="1" filter="url(#cardShadow)" />
+    <text x="248" y="22" font-size="14">♻️</text>
+    <text x="248" y="44" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="18" fill="#0369a1">3</text>
+    <text x="248" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">Dapat Didaur</text>
+  </g>
+  <g transform="translate(16, 278)">
+    <rect x="0" y="0" width="60" height="30" rx="10" fill="#15803d" />
+    <text x="14" y="20" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" fill="#ffffff">Semua</text>
+    <rect x="66" y="0" width="76" height="30" rx="10" fill="#ffffff" stroke="#cde7d5" stroke-width="1" />
+    <text x="76" y="20" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" fill="#334155">🌱 Organik</text>
+    <rect x="148" y="0" width="90" height="30" rx="10" fill="#ffffff" stroke="#cde7d5" stroke-width="1" />
+    <text x="156" y="20" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" fill="#334155">♻️ Anorganik</text>
+    <rect x="244" y="0" width="76" height="30" rx="10" fill="#ffffff" stroke="#cde7d5" stroke-width="1" />
+    <text x="252" y="20" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" fill="#334155">⚠️ Limbah B3</text>
+  </g>
+  <g transform="translate(16, 322)">
+    <g transform="translate(0, 0)">
+      <rect width="343" height="118" rx="16" fill="#ffffff" stroke="#cde7d5" stroke-width="1" filter="url(#cardShadow)" />
+      <rect x="12" y="12" width="40" height="40" rx="12" fill="#e0f2fe" />
+      <text x="22" y="38" font-size="18">🧴</text>
+      <text x="60" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" fill="#0f2918">Botol Plastik Air Mineral (PET)</text>
+      <text x="60" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">🕒 29 Sep 2026, 13:40</text>
+      <rect x="290" y="14" width="40" height="20" rx="6" fill="#edf7f0" />
+      <text x="310" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#15803d" text-anchor="middle">98%</text>
+      <rect x="12" y="60" width="74" height="20" rx="6" fill="#e0f2fe" />
+      <text x="20" y="74" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#0369a1">Anorganik</text>
+      <rect x="12" y="86" width="319" height="24" rx="6" fill="#edf7f0" />
+      <text x="18" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">📌 Bilas air, remas hingga pipih, buang ke tempat kuning.</text>
+    </g>
+    <g transform="translate(0, 130)">
+      <rect width="343" height="118" rx="16" fill="#ffffff" stroke="#cde7d5" stroke-width="1" filter="url(#cardShadow)" />
+      <rect x="12" y="12" width="40" height="40" rx="12" fill="#dcfce7" />
+      <text x="22" y="38" font-size="18">🍌</text>
+      <text x="60" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" fill="#0f2918">Kulit Pisang &amp; Sisa Makanan</text>
+      <text x="60" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">🕒 29 Sep 2026, 11:15</text>
+      <rect x="290" y="14" width="40" height="20" rx="6" fill="#edf7f0" />
+      <text x="310" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#15803d" text-anchor="middle">95%</text>
+      <rect x="12" y="60" width="62" height="20" rx="6" fill="#dcfce7" />
+      <text x="20" y="74" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#14532d">Organik</text>
+      <rect x="12" y="86" width="319" height="24" rx="6" fill="#edf7f0" />
+      <text x="18" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">📌 Buang ke wadah hijau. Sangat cocok dijadikan pupuk kompos.</text>
+    </g>
+    <g transform="translate(0, 260)">
+      <rect width="343" height="118" rx="16" fill="#ffffff" stroke="#cde7d5" stroke-width="1" filter="url(#cardShadow)" />
+      <rect x="12" y="12" width="40" height="40" rx="12" fill="#fef3c7" />
+      <text x="22" y="38" font-size="18">🔋</text>
+      <text x="60" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" fill="#0f2918">Baterai Bekas Alkaline AA</text>
+      <text x="60" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">🕒 28 Sep 2026, 16:30</text>
+      <rect x="290" y="14" width="40" height="20" rx="6" fill="#edf7f0" />
+      <text x="310" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#15803d" text-anchor="middle">99%</text>
+      <rect x="12" y="60" width="80" height="20" rx="6" fill="#fef3c7" />
+      <text x="20" y="74" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#b45309">Limbah B3</text>
+      <rect x="12" y="86" width="319" height="24" rx="6" fill="#edf7f0" />
+      <text x="18" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">📌 Limbah berbahaya! Buang ke e-waste drop point atau kotak merah.</text>
+    </g>
+  </g>
+  <g transform="translate(0, 732)">
+    <rect width="375" height="80" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <g transform="translate(68, 12)">
+      <text x="19" y="24" font-size="15">🔍</text>
+      <text x="26" y="44" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" fill="#94a3b8" text-anchor="middle">Deteksi</text>
+    </g>
+    <g transform="translate(230, 12)">
+      <circle cx="26" cy="18" r="16" fill="#dcfce7" />
+      <text x="20" y="24" font-size="15">📋</text>
+      <text x="26" y="44" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" fill="#15803d" text-anchor="middle">Riwayat</text>
+    </g>
+    <rect x="122" y="68" width="130" height="4" rx="2" fill="#0f2918" opacity="0.3"/>
+  </g>
+</svg>

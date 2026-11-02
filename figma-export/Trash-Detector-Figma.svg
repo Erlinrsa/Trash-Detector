@@ -1,0 +1,368 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 960" width="1320" height="960" style="background-color: #0f172a;">
+  <defs>
+    <!-- Shadows & Gradients -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f2918" flood-opacity="0.08" />
+    </filter>
+    <filter id="btnShadow" x="-10%" y="-10%" width="120%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#15803d" flood-opacity="0.3" />
+    </filter>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="100%" stop-color="#166534" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title-artboard { font-family: system-ui, -apple-system, sans-serif; font-size: 15px; font-weight: 700; fill: #94a3b8; letter-spacing: 0.5px; }
+    .screen-bg { fill: #f6fbf7; }
+    .card-bg { fill: #ffffff; stroke: #cde7d5; stroke-width: 1; }
+    .card-subtle { fill: #edf7f0; }
+    .text-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; fill: #0f2918; }
+    .text-body { font-family: system-ui, -apple-system, sans-serif; font-weight: 400; fill: #334155; }
+    .text-bold { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; }
+    .text-muted { font-family: system-ui, -apple-system, sans-serif; fill: #64748b; font-size: 12px; }
+    .btn-primary { fill: #15803d; }
+    .btn-secondary { fill: #ffffff; stroke: #15803d; stroke-width: 1.5; }
+  </style>
+
+  <!-- ======================================================== -->
+  <!-- ARTBOARD 1: AUTHENTICATION / LOGIN                       -->
+  <!-- ======================================================== -->
+  <text x="50" y="42" class="title-artboard">LAYAR 1: AUTHENTICATION (LOGIN &amp; REGISTER)</text>
+  <g id="Screen-1-Auth" transform="translate(50, 60)">
+    <!-- Screen Frame (iPhone 375 x 812) -->
+    <rect width="375" height="812" rx="36" class="screen-bg" />
+    <rect width="375" height="812" rx="36" fill="none" stroke="#264532" stroke-width="2" opacity="0.4"/>
+
+    <!-- Status Bar -->
+    <g id="StatusBar" opacity="0.8">
+      <text x="32" y="32" font-family="system-ui" font-size="14" font-weight="700" fill="#0f2918">9:41</text>
+      <circle cx="320" cy="27" r="4" fill="#0f2918" />
+      <circle cx="332" cy="27" r="4" fill="#0f2918" />
+      <rect x="342" y="22" width="18" height="10" rx="3" fill="none" stroke="#0f2918" stroke-width="1.5"/>
+      <rect x="344" y="24" width="12" height="6" rx="1.5" fill="#0f2918"/>
+    </g>
+
+    <!-- Header Badge -->
+    <g transform="translate(95, 75)">
+      <rect width="185" height="26" rx="13" fill="#dcfce7" />
+      <text x="14" y="17" font-family="system-ui" font-size="11" font-weight="700" fill="#14532d" letter-spacing="0.5">🔐 SECURE AUTHENTICATION</text>
+    </g>
+
+    <!-- Header Text -->
+    <text x="187" y="132" class="text-title" font-size="28" text-anchor="middle">Trash Detector</text>
+    <text x="187" y="156" class="text-body" font-size="13" text-anchor="middle" fill="#475569">Masuk untuk mengakses pemindai sampah cerdas</text>
+
+    <!-- Auth Card -->
+    <g transform="translate(20, 180)">
+      <rect width="335" height="520" rx="20" class="card-bg" filter="url(#cardShadow)" />
+
+      <!-- Mode Tab Switcher -->
+      <rect x="16" y="16" width="303" height="42" rx="10" fill="#edf7f0" />
+      <rect x="18" y="18" width="148" height="38" rx="8" fill="#ffffff" filter="url(#cardShadow)" />
+      <text x="92" y="42" class="text-bold" font-size="13" fill="#15803d" text-anchor="middle">Masuk (Login)</text>
+      <text x="244" y="42" class="text-bold" font-size="13" fill="#64748b" text-anchor="middle">Daftar (Register)</text>
+
+      <!-- Input Field: Email -->
+      <g transform="translate(16, 76)">
+        <text x="0" y="14" class="text-bold" font-size="13" fill="#0f2918">Email atau Username <tspan fill="#ef4444">*</tspan></text>
+        <rect x="0" y="24" width="303" height="48" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1" />
+        <text x="14" y="54" class="text-body" font-size="14" fill="#0f2918">user@mail.com</text>
+      </g>
+
+      <!-- Input Field: Password -->
+      <g transform="translate(16, 164)">
+        <text x="0" y="14" class="text-bold" font-size="13" fill="#0f2918">Password <tspan fill="#ef4444">*</tspan></text>
+        <rect x="0" y="24" width="303" height="48" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1" />
+        <text x="14" y="56" class="text-body" font-size="16" fill="#0f2918">••••••••••••</text>
+        <text x="272" y="54" font-size="16">👁️</text>
+      </g>
+
+      <!-- Button Submit (Login) -->
+      <g transform="translate(16, 258)">
+        <rect width="303" height="50" rx="14" class="btn-primary" filter="url(#btnShadow)" />
+        <text x="151" y="31" class="text-bold" font-size="15" fill="#ffffff" text-anchor="middle">Masuk ke Aplikasi</text>
+      </g>
+
+      <!-- Demo Account Box (Week 3) -->
+      <g transform="translate(16, 328)">
+        <rect width="303" height="108" rx="12" fill="#edf7f0" />
+        <text x="12" y="24" class="text-bold" font-size="12" fill="#0f2918">💡 Kredensial Uji Coba Cepat (Slide 5):</text>
+        <text x="12" y="46" class="text-body" font-size="12" fill="#334155">Email: <tspan font-weight="700">user@mail.com</tspan></text>
+        <text x="12" y="64" class="text-body" font-size="12" fill="#334155">Password: <tspan font-weight="700">password123</tspan></text>
+        <rect x="12" y="74" width="279" height="26" rx="6" fill="#ffffff" stroke="#15803d" stroke-width="1" />
+        <text x="151" y="91" class="text-bold" font-size="11" fill="#15803d" text-anchor="middle">✓ Isi Kredensial Otomatis</text>
+      </g>
+
+      <!-- Security Encrypted Note -->
+      <g transform="translate(16, 460)">
+        <text x="151" y="20" class="text-muted" font-size="11" text-anchor="middle">🛡️ Dilindungi Enkripsi Keychain/Keystore (Secure Storage)</text>
+      </g>
+    </g>
+
+    <!-- Bottom Indicator -->
+    <rect x="122" y="796" width="130" height="4" rx="2" fill="#0f2918" opacity="0.4"/>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- ARTBOARD 2: HOME / DETEKSI SAMPAH                        -->
+  <!-- ======================================================== -->
+  <text x="470" y="42" class="title-artboard">LAYAR 2: DETEKSI SAMPAH (PAGE 1)</text>
+  <g id="Screen-2-Deteksi" transform="translate(470, 60)">
+    <!-- Screen Frame -->
+    <rect width="375" height="812" rx="36" class="screen-bg" />
+    <rect width="375" height="812" rx="36" fill="none" stroke="#264532" stroke-width="2" opacity="0.4"/>
+
+    <!-- Status Bar -->
+    <g opacity="0.8">
+      <text x="32" y="32" font-family="system-ui" font-size="14" font-weight="700" fill="#0f2918">9:41</text>
+      <circle cx="320" cy="27" r="4" fill="#0f2918" />
+      <circle cx="332" cy="27" r="4" fill="#0f2918" />
+      <rect x="342" y="22" width="18" height="10" rx="3" fill="none" stroke="#0f2918" stroke-width="1.5"/>
+      <rect x="344" y="24" width="12" height="6" rx="1.5" fill="#0f2918"/>
+    </g>
+
+    <!-- User Status Bar -->
+    <g transform="translate(16, 50)">
+      <rect width="343" height="48" rx="14" class="card-bg" filter="url(#cardShadow)" />
+      <circle cx="30" cy="24" r="15" fill="#dcfce7" />
+      <text x="24" y="29" font-size="14">👤</text>
+      <text x="54" y="19" class="text-body" font-size="10.5" fill="#64748b">Masuk sebagai:</text>
+      <text x="54" y="34" class="text-bold" font-size="13" fill="#0f2918">Mahasiswa Peduli Lingkungan</text>
+      <rect x="265" y="10" width="66" height="28" rx="8" fill="#fee2e2" />
+      <text x="298" y="28" class="text-bold" font-size="11" fill="#ef4444" text-anchor="middle">Keluar 🚪</text>
+    </g>
+
+    <!-- Title & Brand -->
+    <g transform="translate(16, 110)">
+      <rect width="180" height="24" rx="12" fill="#dcfce7" />
+      <text x="12" y="16" font-family="system-ui" font-size="10.5" font-weight="700" fill="#14532d" letter-spacing="0.5">🌱 SMART WASTE DETECTION</text>
+      <text x="0" y="50" class="text-title" font-size="26">Trash Detector</text>
+      <text x="0" y="70" class="text-body" font-size="12" fill="#475569">Kenali jenis sampahmu secara cerdas melalui foto.</text>
+    </g>
+
+    <!-- Hero Card Graphic -->
+    <g transform="translate(16, 195)">
+      <rect width="343" height="110" rx="16" fill="url(#heroGradient)" filter="url(#cardShadow)" />
+      <circle cx="280" cy="55" r="50" fill="#22c55e" opacity="0.3" />
+      <text x="24" y="44" class="text-bold" font-size="17" fill="#ffffff">Pilah Sampah Lebih Cepat</text>
+      <text x="24" y="66" class="text-body" font-size="12" fill="#dcfce7">Gunakan kamera AI untuk identifikasi bahan</text>
+      <rect x="24" y="78" width="150" height="22" rx="6" fill="rgba(255,255,255,0.2)" />
+      <text x="32" y="93" class="text-bold" font-size="10" fill="#ffffff">♻️ Organik • Anorganik • B3</text>
+    </g>
+
+    <!-- Main Action Buttons -->
+    <g transform="translate(16, 320)">
+      <text x="0" y="16" class="text-bold" font-size="16" fill="#0f2918">Mulai Deteksi</text>
+      
+      <!-- Tombol Ambil Foto (Kamera) -->
+      <g transform="translate(0, 26)">
+        <rect width="343" height="56" rx="16" class="btn-primary" filter="url(#btnShadow)" />
+        <circle cx="34" cy="28" r="18" fill="rgba(255,255,255,0.25)" />
+        <text x="26" y="34" font-size="16">📸</text>
+        <text x="64" y="26" class="text-bold" font-size="15" fill="#ffffff">Ambil Foto</text>
+        <text x="64" y="42" class="text-body" font-size="11.5" fill="#e2e8f0">Gunakan kamera langsung</text>
+      </g>
+
+      <!-- Tombol Upload Galeri -->
+      <g transform="translate(0, 92)">
+        <rect width="343" height="56" rx="16" class="btn-secondary" filter="url(#cardShadow)" />
+        <circle cx="34" cy="28" r="18" fill="#dcfce7" />
+        <text x="26" y="34" font-size="16">🖼️</text>
+        <text x="64" y="26" class="text-bold" font-size="15" fill="#15803d">Upload dari Galeri</text>
+        <text x="64" y="42" class="text-body" font-size="11.5" fill="#64748b">Pilih gambar dari album</text>
+      </g>
+    </g>
+
+    <!-- Placeholder Hasil Deteksi Card -->
+    <g transform="translate(16, 490)">
+      <text x="0" y="14" class="text-bold" font-size="16" fill="#0f2918">Hasil Deteksi Sampah</text>
+      <g transform="translate(0, 22)">
+        <rect width="343" height="195" rx="18" class="card-bg" stroke="#86efac" stroke-width="1.5" stroke-dasharray="6,4" />
+        <circle cx="171" cy="46" r="24" fill="#edf7f0" />
+        <text x="161" y="53" font-size="20">🔍</text>
+        <text x="171" y="90" class="text-bold" font-size="14" fill="#0f2918" text-anchor="middle">Belum Ada Sampah yang Dipindai</text>
+        <text x="171" y="110" class="text-body" font-size="11" fill="#64748b" text-anchor="middle">Ambil foto atau unggah gambar untuk melihat jenis,</text>
+        <text x="171" y="125" class="text-body" font-size="11" fill="#64748b" text-anchor="middle">kategori, dan panduan pemilahan yang tepat.</text>
+        
+        <!-- Category preview chips -->
+        <g transform="translate(24, 142)">
+          <rect x="0" y="0" width="66" height="24" rx="8" fill="#eaf8ee"/>
+          <text x="8" y="16" font-family="system-ui" font-size="10" font-weight="700" fill="#15803d">🌱 Organik</text>
+
+          <rect x="72" y="0" width="76" height="24" rx="8" fill="#e8f4fd"/>
+          <text x="80" y="16" font-family="system-ui" font-size="10" font-weight="700" fill="#0369a1">♻️ Anorganik</text>
+
+          <rect x="154" y="0" width="74" height="24" rx="8" fill="#fef3e6"/>
+          <text x="162" y="16" font-family="system-ui" font-size="10" font-weight="700" fill="#b45309">⚠️ Limbah B3</text>
+
+          <rect x="234" y="0" width="62" height="24" rx="8" fill="#f5eefb"/>
+          <text x="242" y="16" font-family="system-ui" font-size="10" font-weight="700" fill="#6b21a8">📦 Kertas</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Bottom Navigation Bar (Tabs) -->
+    <g id="TabBar" transform="translate(0, 732)">
+      <rect width="375" height="80" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <!-- Tab 1: Deteksi (Active) -->
+      <g transform="translate(68, 12)">
+        <circle cx="26" cy="18" r="16" fill="#dcfce7" />
+        <text x="19" y="24" font-size="15">🔍</text>
+        <text x="26" y="44" class="text-bold" font-size="11" fill="#15803d" text-anchor="middle">Deteksi</text>
+      </g>
+      <!-- Tab 2: Riwayat (Inactive) -->
+      <g transform="translate(230, 12)">
+        <text x="20" y="24" font-size="15">📋</text>
+        <text x="26" y="44" class="text-bold" font-size="11" fill="#94a3b8" text-anchor="middle">Riwayat</text>
+      </g>
+      <rect x="122" y="68" width="130" height="4" rx="2" fill="#0f2918" opacity="0.3"/>
+    </g>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- ARTBOARD 3: RIWAYAT SAMPAH                               -->
+  <!-- ======================================================== -->
+  <text x="890" y="42" class="title-artboard">LAYAR 3: RIWAYAT SAMPAH (PAGE 2)</text>
+  <g id="Screen-3-Riwayat" transform="translate(890, 60)">
+    <!-- Screen Frame -->
+    <rect width="375" height="812" rx="36" class="screen-bg" />
+    <rect width="375" height="812" rx="36" fill="none" stroke="#264532" stroke-width="2" opacity="0.4"/>
+
+    <!-- Status Bar -->
+    <g opacity="0.8">
+      <text x="32" y="32" font-family="system-ui" font-size="14" font-weight="700" fill="#0f2918">9:41</text>
+      <circle cx="320" cy="27" r="4" fill="#0f2918" />
+      <circle cx="332" cy="27" r="4" fill="#0f2918" />
+      <rect x="342" y="22" width="18" height="10" rx="3" fill="none" stroke="#0f2918" stroke-width="1.5"/>
+      <rect x="344" y="24" width="12" height="6" rx="1.5" fill="#0f2918"/>
+    </g>
+
+    <!-- User Status Bar -->
+    <g transform="translate(16, 50)">
+      <rect width="343" height="48" rx="14" class="card-bg" filter="url(#cardShadow)" />
+      <circle cx="30" cy="24" r="15" fill="#dcfce7" />
+      <text x="24" y="29" font-size="14">👤</text>
+      <text x="54" y="19" class="text-body" font-size="10.5" fill="#64748b">Masuk sebagai:</text>
+      <text x="54" y="34" class="text-bold" font-size="13" fill="#0f2918">Mahasiswa Peduli Lingkungan</text>
+      <rect x="265" y="10" width="66" height="28" rx="8" fill="#fee2e2" />
+      <text x="298" y="28" class="text-bold" font-size="11" fill="#ef4444" text-anchor="middle">Keluar 🚪</text>
+    </g>
+
+    <!-- Header Text -->
+    <g transform="translate(16, 110)">
+      <rect width="140" height="24" rx="12" fill="#dcfce7" />
+      <text x="12" y="16" font-family="system-ui" font-size="10.5" font-weight="700" fill="#14532d" letter-spacing="0.5">📋 ARSIP PEMINDAIAN</text>
+      <text x="0" y="50" class="text-title" font-size="26">Riwayat Sampah</text>
+      <text x="0" y="70" class="text-body" font-size="12" fill="#475569">Catatan pindaian sampah yang telah kamu identifikasi.</text>
+    </g>
+
+    <!-- 3 KPI Cards -->
+    <g transform="translate(16, 195)">
+      <!-- KPI 1 -->
+      <rect x="0" y="0" width="107" height="68" rx="14" class="card-bg" filter="url(#cardShadow)" />
+      <text x="12" y="22" font-size="14">🔢</text>
+      <text x="12" y="44" class="text-bold" font-size="18" fill="#0f2918">4</text>
+      <text x="12" y="58" class="text-body" font-size="10.5" fill="#64748b">Total Dipindai</text>
+
+      <!-- KPI 2 -->
+      <rect x="118" y="0" width="107" height="68" rx="14" class="card-bg" filter="url(#cardShadow)" />
+      <text x="130" y="22" font-size="14">🌱</text>
+      <text x="130" y="44" class="text-bold" font-size="18" fill="#15803d">+100</text>
+      <text x="130" y="58" class="text-body" font-size="10.5" fill="#64748b">Eco Points</text>
+
+      <!-- KPI 3 -->
+      <rect x="236" y="0" width="107" height="68" rx="14" class="card-bg" filter="url(#cardShadow)" />
+      <text x="248" y="22" font-size="14">♻️</text>
+      <text x="248" y="44" class="text-bold" font-size="18" fill="#0369a1">3</text>
+      <text x="248" y="58" class="text-body" font-size="10.5" fill="#64748b">Dapat Didaur</text>
+    </g>
+
+    <!-- Filter Chips Row -->
+    <g transform="translate(16, 278)">
+      <rect x="0" y="0" width="60" height="30" rx="10" fill="#15803d" />
+      <text x="14" y="20" class="text-bold" font-size="12" fill="#ffffff">Semua</text>
+
+      <rect x="66" y="0" width="76" height="30" rx="10" class="card-bg" />
+      <text x="76" y="20" class="text-bold" font-size="12" fill="#334155">🌱 Organik</text>
+
+      <rect x="148" y="0" width="90" height="30" rx="10" class="card-bg" />
+      <text x="156" y="20" class="text-bold" font-size="12" fill="#334155">♻️ Anorganik</text>
+
+      <rect x="244" y="0" width="76" height="30" rx="10" class="card-bg" />
+      <text x="252" y="20" class="text-bold" font-size="12" fill="#334155">⚠️ Limbah B3</text>
+    </g>
+
+    <!-- History List Items -->
+    <g transform="translate(16, 322)">
+      <!-- Item 1: Botol PET -->
+      <g transform="translate(0, 0)">
+        <rect width="343" height="118" rx="16" class="card-bg" filter="url(#cardShadow)" />
+        <rect x="12" y="12" width="40" height="40" rx="12" fill="#e0f2fe" />
+        <text x="22" y="38" font-size="18">🧴</text>
+        <text x="60" y="28" class="text-bold" font-size="14" fill="#0f2918">Botol Plastik Air Mineral (PET)</text>
+        <text x="60" y="44" class="text-body" font-size="11" fill="#64748b">🕒 29 Sep 2026, 13:40</text>
+        <rect x="290" y="14" width="40" height="20" rx="6" fill="#edf7f0" />
+        <text x="310" y="28" class="text-bold" font-size="10.5" fill="#15803d" text-anchor="middle">98%</text>
+
+        <rect x="12" y="60" width="74" height="20" rx="6" fill="#e0f2fe" />
+        <text x="20" y="74" class="text-bold" font-size="10.5" fill="#0369a1">Anorganik</text>
+
+        <rect x="12" y="86" width="319" height="24" rx="6" fill="#edf7f0" />
+        <text x="18" y="102" class="text-body" font-size="10" fill="#334155">📌 Bilas air, remas hingga pipih, buang ke tempat kuning.</text>
+      </g>
+
+      <!-- Item 2: Kulit Pisang -->
+      <g transform="translate(0, 130)">
+        <rect width="343" height="118" rx="16" class="card-bg" filter="url(#cardShadow)" />
+        <rect x="12" y="12" width="40" height="40" rx="12" fill="#dcfce7" />
+        <text x="22" y="38" font-size="18">🍌</text>
+        <text x="60" y="28" class="text-bold" font-size="14" fill="#0f2918">Kulit Pisang &amp; Sisa Makanan</text>
+        <text x="60" y="44" class="text-body" font-size="11" fill="#64748b">🕒 29 Sep 2026, 11:15</text>
+        <rect x="290" y="14" width="40" height="20" rx="6" fill="#edf7f0" />
+        <text x="310" y="28" class="text-bold" font-size="10.5" fill="#15803d" text-anchor="middle">95%</text>
+
+        <rect x="12" y="60" width="62" height="20" rx="6" fill="#dcfce7" />
+        <text x="20" y="74" class="text-bold" font-size="10.5" fill="#14532d">Organik</text>
+
+        <rect x="12" y="86" width="319" height="24" rx="6" fill="#edf7f0" />
+        <text x="18" y="102" class="text-body" font-size="10" fill="#334155">📌 Buang ke wadah hijau. Sangat cocok dijadikan pupuk kompos.</text>
+      </g>
+
+      <!-- Item 3: Baterai AA -->
+      <g transform="translate(0, 260)">
+        <rect width="343" height="118" rx="16" class="card-bg" filter="url(#cardShadow)" />
+        <rect x="12" y="12" width="40" height="40" rx="12" fill="#fef3c7" />
+        <text x="22" y="38" font-size="18">🔋</text>
+        <text x="60" y="28" class="text-bold" font-size="14" fill="#0f2918">Baterai Bekas Alkaline AA</text>
+        <text x="60" y="44" class="text-body" font-size="11" fill="#64748b">🕒 28 Sep 2026, 16:30</text>
+        <rect x="290" y="14" width="40" height="20" rx="6" fill="#edf7f0" />
+        <text x="310" y="28" class="text-bold" font-size="10.5" fill="#15803d" text-anchor="middle">99%</text>
+
+        <rect x="12" y="60" width="80" height="20" rx="6" fill="#fef3c7" />
+        <text x="20" y="74" class="text-bold" font-size="10.5" fill="#b45309">Limbah B3</text>
+
+        <rect x="12" y="86" width="319" height="24" rx="6" fill="#edf7f0" />
+        <text x="18" y="102" class="text-body" font-size="10" fill="#334155">📌 Limbah berbahaya! Buang ke e-waste drop point atau kotak merah.</text>
+      </g>
+    </g>
+
+    <!-- Bottom Navigation Bar (Tabs) -->
+    <g transform="translate(0, 732)">
+      <rect width="375" height="80" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <!-- Tab 1: Deteksi (Inactive) -->
+      <g transform="translate(68, 12)">
+        <text x="19" y="24" font-size="15">🔍</text>
+        <text x="26" y="44" class="text-bold" font-size="11" fill="#94a3b8" text-anchor="middle">Deteksi</text>
+      </g>
+      <!-- Tab 2: Riwayat (Active) -->
+      <g transform="translate(230, 12)">
+        <circle cx="26" cy="18" r="16" fill="#dcfce7" />
+        <text x="20" y="24" font-size="15">📋</text>
+        <text x="26" y="44" class="text-bold" font-size="11" fill="#15803d" text-anchor="middle">Riwayat</text>
+      </g>
+      <rect x="122" y="68" width="130" height="4" rx="2" fill="#0f2918" opacity="0.3"/>
+    </g>
+  </g>
+</svg>
